@@ -21,6 +21,11 @@ namespace Windows.Windows.MIcrowaveTimer
             RotateByFloat(270f);
         }
 
+        private void OnDestroy()
+        {
+            SimManager.DeRegisterProvider(this);
+        }
+
         private void Update()
         {
             if (m_IsDragging)

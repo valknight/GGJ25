@@ -1,3 +1,5 @@
+using System;
+
 namespace Market_Simulation
 {
     public interface ISimValueProvider

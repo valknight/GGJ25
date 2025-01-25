@@ -70,5 +70,10 @@ namespace UI
         {
             _isDragging = true;
         }
+
+        public void DestroyWindow()
+        {
+            Destroy(gameObject);
+        }
     }
 }

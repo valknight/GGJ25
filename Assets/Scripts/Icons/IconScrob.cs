@@ -15,6 +15,8 @@ namespace Windows.Icons
         {
             if (instantiated)
             {
+                if (!instantiated.gameObject.activeSelf)
+                    instantiated.gameObject.SetActive(true);
                 instantiated.SetAsLastSibling();
                 return;
             }

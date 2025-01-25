@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using Market_Simulation;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour, ISimValueProvider
 {
@@ -19,6 +21,11 @@ public class GameManager : MonoBehaviour, ISimValueProvider
       SimManager.RegisterProvider(this);
       simulating = true;
       StartCoroutine(UpdateSim());
+   }
+
+   private void OnDestroy()
+   {
+      SimManager.DeRegisterProvider(this);
    }
 
    private IEnumerator UpdateSim()
