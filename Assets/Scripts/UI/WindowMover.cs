@@ -52,6 +52,7 @@ namespace UI
             if (eventData.pointerCurrentRaycast.gameObject == null)
                 return;
             _targetMousePosition = eventData.pointerCurrentRaycast.worldPosition;
+            transform.SetAsLastSibling();
         }
 
         public void OnEndDrag(PointerEventData eventData)
