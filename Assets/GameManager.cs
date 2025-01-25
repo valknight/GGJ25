@@ -1,0 +1,39 @@
+using System.Collections;
+using Market_Simulation;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour, ISimValueProvider
+{
+   public float simSpeed;
+   public float simNumber;
+
+   public bool simulating;
+   private void Awake()
+   {
+      SimManager.Init();
+   }
+
+   private void Start()
+   {
+      SimManager.RegisterProvider(this);
+      simulating = true;
+      StartCoroutine(UpdateSim());
+   }
+
+   private IEnumerator UpdateSim()
+   {
+      while (true)
+      {
+         yield return new WaitForSeconds(simSpeed);
+         if (!simulating) continue;
+         
+         SimManager.Update();
+         simNumber = SimManager.State.currentValue;
+      }
+   }
+
+   public float GetValue()
+   {
+      return Random.Range(-10,10);
+   }
+}
