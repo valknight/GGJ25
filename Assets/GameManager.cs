@@ -34,6 +34,6 @@ public class GameManager : MonoBehaviour, ISimValueProvider
 
    public float GetValue()
    {
-      return Random.Range(-10,10);
+      return Random.Range(-5,7);
    }
 }
