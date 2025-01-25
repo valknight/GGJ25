@@ -22,6 +22,7 @@ public static class SimManager
          delta += provider.GetValue();
       }
       State.currentValue += delta;
+      State.lastDelta = delta;
       SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.SimValueUpdated, State);
    }
 
