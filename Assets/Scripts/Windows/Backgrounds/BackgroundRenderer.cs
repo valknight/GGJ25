@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,6 +37,11 @@ namespace Windows.Backgrounds
         private void MaterialChanged(Material mat)
         {
             m_meshRenderer.material = mat;
+        }
+
+        public void OnDestroy()
+        {
+            OnBackgroundChanged -= MaterialChanged;
         }
     }
 }
