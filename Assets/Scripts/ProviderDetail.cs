@@ -26,7 +26,8 @@ public class ProviderDetail : MonoBehaviour
     private void OnProviderPolled(object obj)
     {
         if (obj is not SimProviderPolledEvent eventData) return;
-
+        if (eventData. provider != _provider) return;
+        
         var sign = eventData.value > 0 ? "+" : "-";
         providerAmountText.text = $"{sign}{eventData.value:F2}";
     }
