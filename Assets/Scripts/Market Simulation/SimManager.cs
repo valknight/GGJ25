@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Market_Simulation;
+using static Market_Simulation.ISimValueProvider;
 
 public static class SimManager
 {
@@ -19,7 +20,15 @@ public static class SimManager
       var delta = 0f;
       foreach (var provider in _valueProviders)
       {
-         delta += provider.GetValue();
+         var value = provider.GetValue();
+         delta += value;
+         SystemEventManager.RaiseEvent(
+            SystemEventManager.SystemEventType.SimProviderPolled, 
+            new SimProviderPolledEvent()
+            {
+               provider = provider,
+               value =  value
+            });
       }
       State.currentValue += delta;
       State.lastDelta = delta;
@@ -29,10 +38,14 @@ public static class SimManager
    public static void RegisterProvider(ISimValueProvider provider)
    {
       _valueProviders.Add(provider);
+      SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.ProviderRegistered, provider);
    }
 
    public static void DeRegisterProvider(ISimValueProvider provider)
    {
+      if (!_valueProviders.Contains(provider)) return;
+      
       _valueProviders.Remove(provider);
+      SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.ProviderDeRegistered, provider);
    }
 }

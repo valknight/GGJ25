@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using Market_Simulation;
 using TMPro;
 using UnityEngine;
 using Utils;
@@ -12,12 +13,21 @@ namespace Windows
         public GameObject downArrow;
 
         public TMP_Text valueText;
+
+        public ProviderDetail detailPrefab;
+        public RectTransform detailParent;
         
         private void Start()
         {
             SystemEventManager.Subscribe(SystemEventManager.SystemEventType.SimValueUpdated, OnSimValueUpdated);
+            SystemEventManager.Subscribe(SystemEventManager.SystemEventType.ProviderRegistered, OnProviderRegistered);
         }
 
+        private void OnProviderRegistered(object obj)
+        {
+            if (obj is ISimValueProvider provider) Instantiate(detailPrefab, detailParent).Init(provider);
+        }
+        
         private void OnSimValueUpdated(object obj)
         {
             if (obj is SimState state)
@@ -46,6 +56,7 @@ namespace Windows
         private void OnDisable()
         {
             SystemEventManager.Unsubscribe(SystemEventManager.SystemEventType.SimValueUpdated, OnSimValueUpdated);
+            SystemEventManager.Unsubscribe(SystemEventManager.SystemEventType.ProviderRegistered, OnProviderRegistered);
         }
     }
 }

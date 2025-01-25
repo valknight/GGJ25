@@ -5,7 +5,10 @@ public static class SystemEventManager
 {
     public enum SystemEventType
     {
-        SimValueUpdated
+        SimValueUpdated,
+        SimProviderPolled,
+        ProviderRegistered,
+        ProviderDeRegistered
     }
 
     private static Dictionary<SystemEventType, Action<object>> _eventListeners;

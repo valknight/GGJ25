@@ -252,7 +252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -32.64999}
+  m_AnchoredPosition: {x: 0, y: -32.649994}
   m_SizeDelta: {x: 0, y: -65.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1810347062927258121
@@ -306,14 +306,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 14
     m_Right: 0
-    m_Top: 0
+    m_Top: 13
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 116.3, y: 27.1}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -850,3 +850,5 @@ MonoBehaviour:
   upArrow: {fileID: 9102880697735498333}
   downArrow: {fileID: 6532766740550526268}
   valueText: {fileID: 8543729738594440396}
+  detailPrefab: {fileID: 8927818002574575378, guid: cc2125353dff5429ca92e0dd307f0b7e, type: 3}
+  detailParent: {fileID: 1669398980790022969}
