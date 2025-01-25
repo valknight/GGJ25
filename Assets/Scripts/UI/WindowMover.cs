@@ -36,6 +36,11 @@ namespace UI
             _targetMousePosition = transform.position;
         }
 
+        public void UpdatePositionAsLastDragged()
+        {
+            _targetMousePosition = transform.position;
+        }
+
         public void Update()
         {
             if (_isDragging || Time.time - _timeDragEnded < DURATION_BEFORE_SNAPPING)
