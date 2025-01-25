@@ -1,11 +1,13 @@
 using System;
+using Market_Simulation;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Windows.Windows.MIcrowaveTimer
 {
-    public class MicrowaveTimerWindow: MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
+    public class MicrowaveTimerWindow: MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler, ISimValueProvider
     {
+        [SerializeField] private float marketImpact = 50f;
         private bool m_IsDragging;
         
         public void OnDrag(PointerEventData eventData)
@@ -15,6 +17,7 @@ namespace Windows.Windows.MIcrowaveTimer
 
         private void Start()
         {
+            SimManager.RegisterProvider(this);
             RotateByFloat(270f);
         }
 
@@ -38,5 +41,11 @@ namespace Windows.Windows.MIcrowaveTimer
         public void OnBeginDrag(PointerEventData eventData) => m_IsDragging = true;
         
         public void OnEndDrag(PointerEventData eventData) => m_IsDragging = false;
+        public float GetValue()
+        {
+            return (Mathf.InverseLerp(270f, 90f, transform.rotation.eulerAngles.z) - 0.5f) * marketImpact;
+        }
+
+        public string GetProviderName() => "ETimer";
     }
 }

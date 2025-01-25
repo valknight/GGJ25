@@ -16,13 +16,13 @@ public static class SimManager
    
    public static void Update()
    {
-      var delta = 0f;
+      var newValue = 0f;
       foreach (var provider in _valueProviders)
       {
-         delta += provider.GetValue();
+         newValue += provider.GetValue();
       }
-      State.currentValue += delta;
-      State.lastDelta = delta;
+      State.lastDelta = newValue - State.currentValue;
+      State.currentValue = newValue;
       SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.SimValueUpdated, State);
    }
 
