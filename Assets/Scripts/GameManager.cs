@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour, ISimValueProvider
    public bool simulating;
    private void Awake()
    {
+      SystemEventManager.Init();
       SimManager.Init();
    }
 
