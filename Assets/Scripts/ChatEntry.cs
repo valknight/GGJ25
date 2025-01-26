@@ -12,8 +12,6 @@ namespace DefaultNamespace
         {
             usernameLabel.text = u+":";
             messageBody.text = m;
-            
-            Destroy(gameObject, 3);
         }
         
     }
