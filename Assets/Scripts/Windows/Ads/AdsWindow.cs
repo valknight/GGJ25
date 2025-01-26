@@ -14,6 +14,8 @@ namespace Windows.Ads
         private float _timeSinceLastCookieAccepted;
         [SerializeField] private TMP_Text _text;
 
+        public Transform cookieSpawnAnchor;
+
         public void Start()
         {
             SimManager.RegisterProvider(this);

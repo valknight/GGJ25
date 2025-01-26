@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8946a6a0ce247d19bc27962c73e77d, type: 3}
   m_Name: EMan
   m_EditorClassIdentifier: 
-  applicationId: EWall
+  applicationId: EMan
   applicationWindow: {fileID: 7668210361574312521, guid: ec50d87fe2a98451caf0311c6f9c4b9a, type: 3}
   applicationIcon: {fileID: 21300000, guid: f6f431b8bf0c54364bdc5d03328fa33c, type: 3}

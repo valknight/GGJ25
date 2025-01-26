@@ -75,6 +75,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6174770640261062709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2673233471730475856}
+  m_Layer: 0
+  m_Name: MouthPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2673233471730475856
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174770640261062709}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8504197856789419966}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -83.4}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &7717723271547434525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,6 +217,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2098156842408206755, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2673233471730475856}
     - targetCorrespondingSourceObject: {fileID: 73701703691835588, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4524807622374238524}
@@ -215,3 +253,11 @@ MonoBehaviour:
   idleSprite: {fileID: -90545084, guid: b01cb557fc18a4a16841bb0a0b3d52e5, type: 3}
   eatingSprite: {fileID: -852275546, guid: b01cb557fc18a4a16841bb0a0b3d52e5, type: 3}
   manImage: {fileID: 4648471153377427335}
+  cookiePrefab: {fileID: 9032113780129262922, guid: ddbced206a23e456782e13bebe010de0, type: 3}
+  mouthAnchor: {fileID: 2673233471730475856}
+  cookieSpeed: 5
+--- !u!224 &8504197856789419966 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2098156842408206755, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
+  m_PrefabInstance: {fileID: 7717723271547434525}
+  m_PrefabAsset: {fileID: 0}
