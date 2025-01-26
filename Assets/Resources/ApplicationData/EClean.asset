@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applicationId: EClean
   applicationWindow: {fileID: 2250741652204507445, guid: 1a92e202cdcac4ab58fa1b02851ac116, type: 3}
-  applicationIcon: {fileID: 21300000, guid: 2a64c0e7d2b5945968519f685a911c3d, type: 3}
+  applicationIcon: {fileID: 21300000, guid: 2a36b96fc2ce846fabd8c22cac338403, type: 3}
