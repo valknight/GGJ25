@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Data;
 using Market_Simulation;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour, ISimValueProvider
    private void Awake()
    {
       SystemEventManager.Init();
+      ApplicationManager.Init();
       SimManager.Init();
    }
 

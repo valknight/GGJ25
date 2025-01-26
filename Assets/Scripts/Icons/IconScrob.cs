@@ -22,7 +22,6 @@ namespace Windows.Icons
             }
             instantiated = Instantiate(windowPrefab.gameObject, targetCanvas.transform).transform;
             instantiated.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-            
         }
     }
 }
