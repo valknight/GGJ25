@@ -166,6 +166,7 @@ MonoBehaviour:
   simSpeed: 1
   simRandom: 0.3
   simulating: 0
+  titleScreen: {fileID: 0}
 --- !u!1 &234330315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1247,7 @@ MonoBehaviour:
   icons:
   - {fileID: 11400000, guid: 05c4bcc9769b04bb5b8e29c2e3e4f307, type: 2}
   - {fileID: 11400000, guid: 8e318a0ff8a52432282e6351045911eb, type: 2}
+  - {fileID: 11400000, guid: 39cfb5dd34acd4cba81aa469efc3392d, type: 2}
   - {fileID: 11400000, guid: afc6ac09fa86446aba79f64e812d25ab, type: 2}
   - {fileID: 11400000, guid: f4d29c61ffd4f4a548b8b421c241e3e7, type: 2}
   - {fileID: 11400000, guid: 8be180d76be424f66aa08a93e77eaaf6, type: 2}
