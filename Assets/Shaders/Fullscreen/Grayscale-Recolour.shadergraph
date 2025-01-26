@@ -1134,7 +1134,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "4301c18634614713ad3f511cac1f737a",
     "m_Id": 0,
-    "m_DisplayName": "Color_B",
+    "m_DisplayName": "ColorB",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1536,11 +1536,11 @@
     "m_Guid": {
         "m_GuidSerialized": "e86ddb47-fdae-4886-8dfc-11ba60a48d6a"
     },
-    "m_Name": "Color_B",
+    "m_Name": "ColorB",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color_B",
-    "m_DefaultReferenceName": "_Color_B",
-    "m_OverrideReferenceName": "",
+    "m_RefNameGeneratedByDisplayName": "ColorB",
+    "m_DefaultReferenceName": "_ColorB",
+    "m_OverrideReferenceName": "_ColorB",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -1556,7 +1556,7 @@
         "a": 0.0
     },
     "isMainColor": false,
-    "m_ColorMode": 1
+    "m_ColorMode": 0
 }
 
 {
@@ -2249,7 +2249,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "acf586b2021e49a6aa5495fc79bd612e",
     "m_Id": 0,
-    "m_DisplayName": "Color_A",
+    "m_DisplayName": "ColorA",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2578,10 +2578,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 428.23004150390627,
-            "y": 386.7300109863281,
-            "width": 208.0,
-            "height": 360.5
+            "x": 475.5,
+            "y": 323.9999694824219,
+            "width": 207.99993896484376,
+            "height": 360.4999694824219
         }
     },
     "m_Slots": [
@@ -2857,11 +2857,11 @@
     "m_Guid": {
         "m_GuidSerialized": "5556a852-842f-4d3c-bd5a-7d79ef633af5"
     },
-    "m_Name": "Color_A",
+    "m_Name": "ColorA",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color_A",
-    "m_DefaultReferenceName": "_Color_A",
-    "m_OverrideReferenceName": "",
+    "m_RefNameGeneratedByDisplayName": "ColorA",
+    "m_DefaultReferenceName": "_ColorA",
+    "m_OverrideReferenceName": "_ColorA",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -2877,7 +2877,7 @@
         "a": 0.0
     },
     "isMainColor": false,
-    "m_ColorMode": 1
+    "m_ColorMode": 0
 }
 
 {
@@ -3157,10 +3157,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 5.5000128746032719,
-            "y": 352.4999694824219,
-            "width": 207.99993896484376,
-            "height": 326.0000305175781
+            "x": 5.000021934509277,
+            "y": 352.5,
+            "width": 208.0000762939453,
+            "height": 325.99993896484377
         }
     },
     "m_Slots": [
