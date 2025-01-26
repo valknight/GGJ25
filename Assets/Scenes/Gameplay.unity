@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85e9b753be6f4c6fabdb096339ac8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  simSpeed: 0.3
+  simSpeed: 3
   simRandom: 0.3
   simulating: 0
   titleScreen: {fileID: 813874366}
