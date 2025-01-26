@@ -28,7 +28,7 @@ public class ProviderDetail : MonoBehaviour
         if (obj is not SimProviderPolledEvent eventData) return;
         if (eventData. provider != _provider) return;
         
-        var sign = eventData.value > 0 ? "+" : "-";
+        var sign = eventData.value > 0 ? "+" : "";
         if (eventData.provider is ISimValueProviderMultiplier)
             sign = sign + "X";
         providerAmountText.text = $"{sign}{eventData.value:F2}";
