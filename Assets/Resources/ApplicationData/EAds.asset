@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8946a6a0ce247d19bc27962c73e77d, type: 3}
-  m_Name: EGraph
+  m_Name: EAds
   m_EditorClassIdentifier: 
-  applicationId: EGraph
-  applicationWindow: {fileID: 6481373337714847229, guid: e05d483b426214dac9074975b6b63462, type: 3}
-  applicationIcon: {fileID: 21300000, guid: 6797cdf16f21f4499b36c0b1f9acd665, type: 3}
+  applicationId: EAds
+  applicationWindow: {fileID: 3419930961279033041, guid: ebde7b0cba40540069255a4f85c1d0a3, type: 3}
+  applicationIcon: {fileID: 21300000, guid: cdeb202361f3e4eb99a85167e243264f, type: 3}

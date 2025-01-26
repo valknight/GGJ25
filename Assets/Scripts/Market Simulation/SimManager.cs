@@ -11,12 +11,11 @@ public static class SimManager
 
    public static SimState State;
 
-   private static List<ISimValueProvider> _valueProviders;
 
    public static void Init()
    {
-      _valueProviders = new List<ISimValueProvider>();
       State = new SimState();
+      State.activeProviders = new List<ISimValueProvider>();
    }
    
    public static void Update()
@@ -24,15 +23,15 @@ public static class SimManager
       var newValue = 0f;
       var mult = 1f;
       // prevent enumator collection issues
-      for (var index = _valueProviders.Count - 1; index >= 0; index--)
+      for (var index = State.activeProviders.Count - 1; index >= 0; index--)
       {
-         var provider = _valueProviders[index];
+         var provider = State.activeProviders[index];
 #if UNITY_EDITOR
          if (provider is MonoBehaviour behaviour)
          {
             if (!behaviour)
             {
-               _valueProviders.RemoveAt(index);
+               State.activeProviders.RemoveAt(index);
                EditorUtility.DisplayDialog("ISim LEAK", $"{behaviour.GetType().FullName} did not unsubscribe!! This will **EXPLODE** in a build", "OK");
                continue;
             }
@@ -66,17 +65,17 @@ public static class SimManager
 
    public static void RegisterProvider(ISimValueProvider provider)
    {
-      if (_valueProviders.Contains(provider))
+      if (State.activeProviders.Contains(provider))
          return;
-      _valueProviders.Add(provider);
+      State.activeProviders.Add(provider);
       SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.ProviderRegistered, provider);
    }
 
    public static void DeRegisterProvider(ISimValueProvider provider)
    {
-      if (!_valueProviders.Contains(provider)) return;
+      if (!State.activeProviders.Contains(provider)) return;
       
-      _valueProviders.Remove(provider);
+      State.activeProviders.Remove(provider);
       SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.ProviderDeRegistered, provider);
    }
 }
