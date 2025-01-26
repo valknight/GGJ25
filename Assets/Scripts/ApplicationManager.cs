@@ -29,7 +29,7 @@ public static class ApplicationManager
         window = null;
         if (!TryGetDefinition(id, out var def)) return false;
 
-        window = GameObject.Find(def.applicationWindow.name);
+        window = GameObject.Find(def.applicationWindow.name+"(Clone)");
         return window != null;
     }
 }

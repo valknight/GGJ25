@@ -43,6 +43,14 @@ public class GameManager : MonoBehaviour, ISimValueProvider
       }
    }
 
+   private void Update()
+   {
+      if (Input.GetMouseButtonDown(0))
+      {
+         SoundManager.Instance.PlayOnClickSound();
+      }
+   }
+
    public float GetValue()
    {
       return Random.Range(-simRandom,simRandom);
