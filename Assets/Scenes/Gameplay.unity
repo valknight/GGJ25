@@ -1171,8 +1171,8 @@ MonoBehaviour:
   simRandom: 0.3
   simulating: 0
   titleScreen: {fileID: 813874366}
-  loginText: {fileID: 0}
-  usernameText: {fileID: 0}
+  loginText: {fileID: 1193095547}
+  usernameText: {fileID: 1513570829}
 --- !u!224 &1069967789 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3016935942759982420, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
@@ -1515,6 +1515,7 @@ GameObject:
   - component: {fileID: 1339719923}
   - component: {fileID: 1339719922}
   - component: {fileID: 1339719921}
+  - component: {fileID: 1339719924}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1598,6 +1599,18 @@ MonoBehaviour:
           m_StringArgument: Login
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1339719924}
+        m_TargetAssemblyTypeName: LoginButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1339719922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1636,6 +1649,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339719919}
   m_CullTransparentMesh: 1
+--- !u!114 &1339719924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339719919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47b9a9660fbf4c81bfb480ca79fcc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usernameField: {fileID: 1193095547}
 --- !u!1 &1409489732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,6 +3670,10 @@ PrefabInstance:
     - {fileID: 7221550694460654299, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
     - {fileID: 683004908632752362, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
     - {fileID: 3089749250014209754, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
+    - {fileID: 6018632672546221661, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
+    - {fileID: 5259116940271765777, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
+    - {fileID: 3618544790303248226, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
+    - {fileID: 2637434527659284476, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3016935942759982420, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
       insertIndex: -1
