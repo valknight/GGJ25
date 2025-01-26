@@ -9,6 +9,8 @@ public class LoginButton : MonoBehaviour
 
    private Button _button;
 
+   private bool animating = false;
+
    private void OnEnable()
    {
       _button = GetComponent<Button>();
@@ -16,12 +18,21 @@ public class LoginButton : MonoBehaviour
 
    private void Update()
    {
-       _button.interactable = usernameField.text.Length > 1;
+       _button.interactable = !animating && usernameField.text.Length > 1;
    }
 
    public void OnClick()
    {
+       animating = true;
        PlayerPrefs.SetString("Username", usernameField.text);
        SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.Login, null);
+   }
+
+   public void TryLogin()
+   {
+       if (_button.interactable)
+       {
+           OnClick();
+       }
    }
 }
