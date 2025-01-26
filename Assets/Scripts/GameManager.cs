@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour, ISimValueProvider
       ChatManager.Init();
       SimManager.Init();
       titleScreen?.SetActive(true);
-      loginText.text = PlayerPrefs.GetString("Username", string.Empty);
+      loginText?.SetText(PlayerPrefs.GetString("Username", string.Empty));
       
       SystemEventManager.Subscribe(SystemEventManager.SystemEventType.Login, OnLogin);
    }
