@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour, ISimValueProvider
       ApplicationManager.Init();
       ChatManager.Init();
       SimManager.Init();
-      titleScreen.SetActive(true);
+      titleScreen?.SetActive(true);
    }
 
    private void Start()

@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using DefaultNamespace;
+using Market_Simulation;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ChatWindow : MonoBehaviour
+public class ChatWindow : MonoBehaviour, ISimValueProvider, ISimValueProviderMultiplier
 {
     public Vector2 messageGenerationDelay;
     public int maxMessages = 6;
@@ -13,10 +14,18 @@ public class ChatWindow : MonoBehaviour
     public ChatEntry chatEntryPrefab;
 
    private int messageCount = 0;
+   private int streak = 0;
+   
     private void Start()
     {
         messageCount = 0;
         StartCoroutine(UpdateChat());
+        SimManager.RegisterProvider(this);
+    }
+
+    private void OnDestroy()
+    {
+        SimManager.DeRegisterProvider(this);
     }
 
     private IEnumerator UpdateChat()
@@ -38,5 +47,21 @@ public class ChatWindow : MonoBehaviour
             }
             newEntry.Init(username,newMessage);
         }
+    }
+
+    public float GetValue()
+    {
+        if (Mathf.Abs(SimManager.State.currentValue) >= 500f)
+        {
+            streak++;
+        }
+        if (streak == 0)
+            return 0;
+        return Mathf.Sqrt(streak);
+    }
+
+    public string GetProviderName()
+    {
+        return "Herd Mentality";
     }
 }

@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5b97e10929f4c3cb61f17b490bcdd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageGenerationDelay: {x: 0.5, y: 6}
+  messageGenerationDelay: {x: 0.01666667, y: 0.8}
   maxMessages: 7
   messageParent: {fileID: 6703484031718027366}
   chatEntryPrefab: {fileID: 8040628402552267228, guid: a274b0d9ace1040afa8a2244a4f3560e, type: 3}
