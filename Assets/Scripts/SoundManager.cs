@@ -10,12 +10,16 @@ public class SoundManager : MonoBehaviour
    public AudioSource sourcePrefab;
 
    public SoundDefinition[] onClickSounds;
+   public SoundDefinition[] mouseDownSounds;
+   public SoundDefinition[] mouseUpSounds;
 
    public static SoundManager Instance;
-   
+
    public enum SoundEvent
    {
-      OnClick
+      OnClick,
+      OnMouseDown,
+      OnMouseUp,
    }
 
    private void Awake()
@@ -28,15 +32,22 @@ public class SoundManager : MonoBehaviour
       return soundEvent switch
       {
          SoundEvent.OnClick => onClickSounds,
+         SoundEvent.OnMouseDown => mouseDownSounds,
+         SoundEvent.OnMouseUp => mouseUpSounds,
          _ => null
       };
+   }
+
+   public void PlayEventSound(SoundEvent soundEvent)
+   {
+      PlayEventSound(soundEvent, Vector3.zero);
    }
 
    public void PlayEventSound(SoundEvent soundEvent, Vector3 soundPos, float killSoundTime = 3)
    {
       var candidateSounds = GetEventSoundList(soundEvent);
       if (candidateSounds == null || candidateSounds.Length == 0) return;
-      
+
       var sound = candidateSounds[Random.Range(0, candidateSounds.Length)];
 
       var newSource = Instantiate(sourcePrefab, soundPos, quaternion.identity);
@@ -44,12 +55,7 @@ public class SoundManager : MonoBehaviour
       newSource.volume = sound.volume + Random.Range(-sound.volumeRandom, sound.volumeRandom);
       newSource.pitch = sound.pitch + Random.Range(-sound.pitchRandom, sound.pitchRandom);
       newSource.Play();
-      
-      Destroy(newSource.gameObject, killSoundTime);
-   }
 
-   public void PlayOnClickSound()
-   {
-      PlayEventSound(SoundEvent.OnClick, Vector3.zero);
+      Destroy(newSource.gameObject, killSoundTime);
    }
 }

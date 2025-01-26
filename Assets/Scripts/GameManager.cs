@@ -47,7 +47,12 @@ public class GameManager : MonoBehaviour, ISimValueProvider
    {
       if (Input.GetMouseButtonDown(0))
       {
-         SoundManager.Instance.PlayOnClickSound();
+         SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnMouseDown);
+      }
+
+      if (Input.GetMouseButtonUp(0))
+      {
+         SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnMouseUp);
       }
    }
 
