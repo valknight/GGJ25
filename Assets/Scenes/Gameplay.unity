@@ -1094,6 +1094,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1337626251328521700, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
   m_PrefabInstance: {fileID: 8564964339641861222}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &988636629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1476570716731798000, guid: 6a0e752d58d674bad9da6b2f9fe4a25d, type: 3}
+  m_PrefabInstance: {fileID: 8564964339641861222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988636627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &988636631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1122,7 @@ MonoBehaviour:
   - {fileID: 1611959028}
   activeSprite: {fileID: 21300000, guid: e7093cb076b3e484bb1dd657fd06d73d, type: 3}
   mutedSprite: {fileID: 21300000, guid: 3f8bb5ec48d994d92b4a311aac1b2217, type: 3}
-  buttonImage: {fileID: 1844832475}
+  buttonImage: {fileID: 988636629}
 --- !u!1 &1051488594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,8 +2833,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2842,7 +2853,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1844832475}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 988636631}
+        m_TargetAssemblyTypeName: SoundButton, Assembly-CSharp
+        m_MethodName: ToggleMuted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1844832475
 MonoBehaviour:
   m_ObjectHideFlags: 0
