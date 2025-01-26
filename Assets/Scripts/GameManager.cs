@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour, ISimValueProvider
    public float simRandom;
 
    public bool simulating;
+   public GameObject titleScreen;
    private void Awake()
    {
       SystemEventManager.Init();
       ApplicationManager.Init();
       SimManager.Init();
+      titleScreen.SetActive(true);
    }
 
    private void Start()
