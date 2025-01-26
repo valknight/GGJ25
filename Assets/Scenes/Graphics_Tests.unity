@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85e9b753be6f4c6fabdb096339ac8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  simSpeed: 0.1
+  simSpeed: 1
   simRandom: 0.3
   simulating: 0
 --- !u!1 &234330315
@@ -1246,6 +1246,7 @@ MonoBehaviour:
   icons:
   - {fileID: 11400000, guid: 05c4bcc9769b04bb5b8e29c2e3e4f307, type: 2}
   - {fileID: 11400000, guid: 8e318a0ff8a52432282e6351045911eb, type: 2}
+  - {fileID: 11400000, guid: afc6ac09fa86446aba79f64e812d25ab, type: 2}
   - {fileID: 11400000, guid: f4d29c61ffd4f4a548b8b421c241e3e7, type: 2}
   - {fileID: 11400000, guid: 8be180d76be424f66aa08a93e77eaaf6, type: 2}
   - {fileID: 11400000, guid: 50cd6d1b06ab14ab1b7b4e615c7b2af4, type: 2}
