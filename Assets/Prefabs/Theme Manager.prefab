@@ -118,9 +118,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 103627729467014228, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7114696497243455897}
-    - targetCorrespondingSourceObject: {fileID: 103627729467014228, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3368705183815087043}
     - targetCorrespondingSourceObject: {fileID: 5152388357274441333, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
       insertIndex: -1
@@ -162,22 +159,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 103627729467014228, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
   m_PrefabInstance: {fileID: 5453038929357527030}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7114696497243455897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5394537048532691874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e6c1849f9b4c20bfca16ff90bf4544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  themes: []
-  layoutGroup: {fileID: 0}
-  labelPrefab: {fileID: 0}
 --- !u!114 &3368705183815087043
 MonoBehaviour:
   m_ObjectHideFlags: 0
