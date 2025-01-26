@@ -8,6 +8,7 @@ public class DesktopIconInitializer : MonoBehaviour
 
     private void Start()
     {
+        GetComponent<GridLayoutGroup>().enabled = true;
         foreach (var def in ApplicationManager.ApplicationDefinitions)
         {
             Instantiate(desktopIconPrefab, transform).Init(def.Value);
