@@ -45,6 +45,8 @@ public class SoundManager : MonoBehaviour
 
    public void PlayEventSound(SoundEvent soundEvent, Vector3 soundPos, float killSoundTime = 3)
    {
+      if(PlayerPrefs.GetInt("Muted", 0) == 1) return;
+      
       var candidateSounds = GetEventSoundList(soundEvent);
       if (candidateSounds == null || candidateSounds.Length == 0) return;
 
