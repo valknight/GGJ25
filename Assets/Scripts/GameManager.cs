@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour, ISimValueProvider
 
    private void Update()
    {
+      var value = SimManager.State.currentValue;
+      if(value > PlayerPrefs.GetFloat("HighestValue", 0)) PlayerPrefs.SetFloat("HighestValue", value);
+      if(value < PlayerPrefs.GetFloat("LowestValue", 0)) PlayerPrefs.SetFloat("LowestValue", value);
+      
       if (Input.GetMouseButtonDown(0))
       {
          SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnMouseDown);
