@@ -8,7 +8,8 @@ public static class SystemEventManager
         SimValueUpdated,
         SimProviderPolled,
         ProviderRegistered,
-        ProviderDeRegistered
+        ProviderDeRegistered,
+        Login
     }
 
     private static Dictionary<SystemEventType, Action<object>> _eventListeners;

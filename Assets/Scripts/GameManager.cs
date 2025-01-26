@@ -3,6 +3,7 @@ using System.Collections;
 using Data;
 using DefaultNamespace;
 using Market_Simulation;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,9 +11,11 @@ public class GameManager : MonoBehaviour, ISimValueProvider
 {
    public float simSpeed;
    public float simRandom;
-
    public bool simulating;
    public GameObject titleScreen;
+   public TMP_Text loginText;
+   public TMP_Text usernameText;
+   
    private void Awake()
    {
       SystemEventManager.Init();
@@ -20,6 +23,9 @@ public class GameManager : MonoBehaviour, ISimValueProvider
       ChatManager.Init();
       SimManager.Init();
       titleScreen?.SetActive(true);
+      loginText.text = PlayerPrefs.GetString("Username", string.Empty);
+      
+      SystemEventManager.Subscribe(SystemEventManager.SystemEventType.Login, OnLogin);
    }
 
    private void Start()
@@ -64,6 +70,11 @@ public class GameManager : MonoBehaviour, ISimValueProvider
          SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnKeyboardSounds);
       }
    }
+   
+   private void OnLogin(object obj)
+   {
+      usernameText.text = $"Logged in as:  {PlayerPrefs.GetString("Username")}";
+   }
 
    public float GetValue()
    {
@@ -73,5 +84,10 @@ public class GameManager : MonoBehaviour, ISimValueProvider
    public string GetProviderName()
    {
       return "Market Forces";
+   }
+
+   private void OnDisable()
+   {
+      SystemEventManager.Unsubscribe(SystemEventManager.SystemEventType.Login, OnLogin);
    }
 }
