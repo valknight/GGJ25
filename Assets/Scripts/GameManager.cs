@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Data;
+using DefaultNamespace;
 using Market_Simulation;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour, ISimValueProvider
    {
       SystemEventManager.Init();
       ApplicationManager.Init();
+      ChatManager.Init();
       SimManager.Init();
       titleScreen.SetActive(true);
    }
