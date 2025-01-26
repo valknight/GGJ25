@@ -22,23 +22,32 @@ public static class SimManager
    public static void Update()
    {
       var newValue = 0f;
+      var mult = 1f;
       // prevent enumator collection issues
       for (var index = _valueProviders.Count - 1; index >= 0; index--)
       {
          var provider = _valueProviders[index];
 #if UNITY_EDITOR
-         if (provider is MonoBehaviour)
+         if (provider is MonoBehaviour behaviour)
          {
-            if (!(MonoBehaviour)provider)
+            if (!behaviour)
             {
                _valueProviders.RemoveAt(index);
-               EditorUtility.DisplayDialog("ISim LEAK", $"{provider.GetType().FullName} did not unsubscribe!! This will **EXPLODE** in a build", "OK");
+               EditorUtility.DisplayDialog("ISim LEAK", $"{behaviour.GetType().FullName} did not unsubscribe!! This will **EXPLODE** in a build", "OK");
                continue;
             }
          }
 #endif
          var value = provider.GetValue();
-         newValue += value;
+         if (provider is ISimValueProviderMultiplier)
+         {
+            mult += value;
+         }
+         else
+         {
+            newValue += value;
+         }
+
          SystemEventManager.RaiseEvent(
             SystemEventManager.SystemEventType.SimProviderPolled,
             new SimProviderPolledEvent()
@@ -47,6 +56,8 @@ public static class SimManager
                value = value
             });
       }
+
+      newValue *= mult;
 
       State.lastDelta = newValue - State.currentValue;
       State.currentValue = newValue;

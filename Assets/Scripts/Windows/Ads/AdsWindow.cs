@@ -3,6 +3,7 @@ using Market_Simulation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 namespace Windows.Ads
 {
@@ -35,7 +36,11 @@ namespace Windows.Ads
         
         public float GetValue()
         {
-            return cookiesAccepted * 0.49f;
+            if (cookiesAccepted < 5)
+            {
+                return ((5 - cookiesAccepted) * -Random.Range(0.45f, 0.55f));
+            }
+            return cookiesAccepted * Random.Range(0.45f, 0.55f);
         }
 
         public string GetProviderName()
