@@ -50,11 +50,18 @@ public class GameManager : MonoBehaviour, ISimValueProvider
       if (Input.GetMouseButtonDown(0))
       {
          SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnMouseDown);
+         return;
       }
 
       if (Input.GetMouseButtonUp(0))
       {
          SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnMouseUp);
+         return;
+      }
+
+      if (Input.anyKeyDown)
+      {
+         SoundManager.Instance.PlayEventSound(SoundManager.SoundEvent.OnKeyboardSounds);
       }
    }
 

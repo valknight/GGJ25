@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
    public SoundDefinition[] onClickSounds;
    public SoundDefinition[] mouseDownSounds;
    public SoundDefinition[] mouseUpSounds;
+   public SoundDefinition[] keyboardSounds;
 
    public static SoundManager Instance;
 
@@ -20,6 +21,7 @@ public class SoundManager : MonoBehaviour
       OnClick,
       OnMouseDown,
       OnMouseUp,
+      OnKeyboardSounds
    }
 
    private void Awake()
@@ -34,6 +36,7 @@ public class SoundManager : MonoBehaviour
          SoundEvent.OnClick => onClickSounds,
          SoundEvent.OnMouseDown => mouseDownSounds,
          SoundEvent.OnMouseUp => mouseUpSounds,
+         SoundEvent.OnKeyboardSounds => keyboardSounds,
          _ => null
       };
    }
