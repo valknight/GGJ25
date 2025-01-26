@@ -18,7 +18,7 @@ namespace Windows.Windows.MIcrowaveTimer
         private void Start()
         {
             SimManager.RegisterProvider(this);
-            RotateByFloat(270f);
+            RotateByFloat(float.MaxValue);
         }
 
         private void OnDestroy()
@@ -37,7 +37,7 @@ namespace Windows.Windows.MIcrowaveTimer
         {
             var angles = transform.rotation.eulerAngles;
             angles.z += angle;
-            angles.z = Mathf.Clamp(angles.z, 90f, 270f);
+            angles.z = Mathf.Clamp(angles.z, 90f, 270);
             var rotation = transform.rotation;
             rotation.eulerAngles = angles;
             transform.rotation = rotation;

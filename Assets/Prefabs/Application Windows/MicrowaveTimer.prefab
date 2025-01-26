@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b29a73ccef743f58c271e963a4f01b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marketImpact: 50
 --- !u!1 &3537041901716897738
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +334,10 @@ PrefabInstance:
     - target: {fileID: 8666811269861405886, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
       propertyPath: m_text
       value: ETIMER
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666811269861405886, guid: 6ed8911628762489aabdee31de4d440a, type: 3}
+      propertyPath: m_fontSize
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
