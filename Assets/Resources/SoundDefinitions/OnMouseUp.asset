@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d468191a9de44476a5186efcebc7854d, type: 3}
   m_Name: OnMouseUp
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 255da5329425e4c8688f85658c852473, type: 3}
+  audioClip: {fileID: 8300000, guid: 26a5c1dc7fce74b3d972ddd2db23c8f7, type: 3}
   isPooled: 0
   volume: 1
   pitch: 1.2
