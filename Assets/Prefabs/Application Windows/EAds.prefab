@@ -833,3 +833,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookiesAccepted: 0
   _text: {fileID: 3459693598192320783}
+  cookieSpawnAnchor: {fileID: 3629546785927933301}
