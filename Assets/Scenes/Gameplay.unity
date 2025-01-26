@@ -3265,6 +3265,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b8c04276e881e44b48a9ec71a5fefa25, type: 2}
   mouseUpSounds:
   - {fileID: 11400000, guid: 6a53ee96d251f4bdb95d962c61302afa, type: 2}
+  keyboardSounds:
+  - {fileID: 11400000, guid: 5c587f3440dd94f0387a6c2eb04605ab, type: 2}
 --- !u!1 &2137192205
 GameObject:
   m_ObjectHideFlags: 0

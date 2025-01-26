@@ -43,5 +43,20 @@ namespace DefaultNamespace
 
             return messages;
         }
+
+        public static string GetRandomPositiveMessage()
+        {
+            return PositiveMessages[Random.Range(0, PositiveMessages.Count)];
+        }
+
+        public static string GetRandomNegativeMessage()
+        {
+            return NegativeMessages[Random.Range(0, NegativeMessages.Count)];
+        }
+
+        public static string GetRandomUsername()
+        {
+            return ChatterUsernames[Random.Range(0, ChatterUsernames.Count)];
+        }
     }
 }
